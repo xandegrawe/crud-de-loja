@@ -1,0 +1,25 @@
+version: '3'
+services:
+  db:
+    container_name: loja_db
+    stdin_open: true
+    tty: true # Enables debugging capabilities when attached to this container.
+    image: nouchka/sqlite3:latest
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./db:/root/db
+  app:
+    container_name: loja_app
+    stdin_open: true
+    tty: true # Enables debugging capabilities when attached to this container.
+    build: .
+    volumes: 
+      - ".:/app"
+    ports: 
+      - "3000:3000"
+    depends_on:
+      - db
+    links:
+      - db

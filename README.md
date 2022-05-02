@@ -1,9 +1,5 @@
-# Aula 5 - Criando a busca de produtos
+# Crud em Ruby on Rails
 
 Curso de Ruby on Rails 5
 
-Para executar o projeto após o download, execute no terminal os seguintes comandos:
-
-* bundle install
-
-* rails db:migrate
+Projeto de uma loja virtual desenvolvido durante o curso na Alura.

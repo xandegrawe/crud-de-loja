@@ -23,3 +23,6 @@ ADD . /app
 
 RUN chown ${UID}:${GID} /app
 USER ${UID}:${GID}
+
+ENV GEM_HOME="/usr/local/bundle"
+ENV PATH $GEM_HOME/bin:$GEM_HOME/gems/bin:$PATH
